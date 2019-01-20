@@ -13,7 +13,7 @@ export default function Pages() {
       <PageContainer>
         <Router primary={false} component={Fragment}>
           <Launches path="/" />
-          {/* <Launch path="launch/:launchId" /> */}
+          <Launch path="launch/:launchId" />
           {/* <Cart path="cart" /> */}
           {/* <Profile path="profile" /> */}
         </Router>

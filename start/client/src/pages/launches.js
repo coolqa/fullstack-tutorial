@@ -4,25 +4,32 @@ import gql from 'graphql-tag'
 
 import { LaunchTile, Header, Button, Loading } from '../components'
 
+export const LAUNCH_TILE_DATA = gql`
+  fragment LaunchTile on Launch {
+    id
+    isBooked
+    rocket {
+      id
+      name
+    }
+    mission {
+      name
+      missionPatch
+    }
+  }
+`
+
 const GET_LAUNCHES = gql`
   query launchList($after: String) {
     launches(pageSize: 3, after: $after) {
       cursor
       hasMore
       launches {
-        id
-        isBooked
-        rocket {
-          id
-          name
-        }
-        mission {
-          name
-          missionPatch
-        }
+        ...LaunchTile
       }
     }
   }
+  ${LAUNCH_TILE_DATA}
 `
 
 export default function Launches() {
