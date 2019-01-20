@@ -24,7 +24,7 @@ export default function Footer() {
           <ProfileIcon />
           Profile
         </MenuItem>
-        <LogoutButton />
+        {/* <LogoutButton /> */}
       </InnerContainer>
     </Container>
   );
