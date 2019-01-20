@@ -1,12 +1,12 @@
-import React from 'react';
-import styled from 'react-emotion';
+import React from 'react'
+import styled from 'react-emotion'
 
-import MenuItem from './menu-item';
-import LogoutButton from '../containers/logout-button';
-import { ReactComponent as HomeIcon } from '../assets/icons/home.svg';
-import { ReactComponent as CartIcon } from '../assets/icons/cart.svg';
-import { ReactComponent as ProfileIcon } from '../assets/icons/profile.svg';
-import { colors, unit } from '../styles';
+import MenuItem from './menu-item'
+import LogoutButton from '../containers/logout-button'
+import { ReactComponent as HomeIcon } from '../assets/icons/home.svg'
+import { ReactComponent as CartIcon } from '../assets/icons/cart.svg'
+import { ReactComponent as ProfileIcon } from '../assets/icons/profile.svg'
+import { colors, unit } from '../styles'
 
 export default function Footer() {
   return (
@@ -27,7 +27,7 @@ export default function Footer() {
         {/* <LogoutButton /> */}
       </InnerContainer>
     </Container>
-  );
+  )
 }
 
 /**
@@ -41,7 +41,7 @@ const Container = styled('footer')({
   color: colors.textSecondary,
   position: 'sticky',
   bottom: 0,
-});
+})
 
 const InnerContainer = styled('div')({
   display: 'flex',
@@ -49,4 +49,4 @@ const InnerContainer = styled('div')({
   maxWidth: 460,
   padding: unit * 2.5,
   margin: '0 auto',
-});
+})
